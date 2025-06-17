@@ -15,7 +15,7 @@ export default function Layout() {
   const toggleSidebar = () => setSidebarOpen(!sidebarOpen)
 
   return (
-    <div className="flex h-screen overflow-hidden">
+    <div className="flex h-full overflow-hidden w-full">
       {/* Sidebar Backdrop on Mobile */}
       {sidebarOpen && isMobile && (
         <div
@@ -31,6 +31,7 @@ export default function Layout() {
       >
 
         <nav className="space-y-4">
+          <h2 className="underline font-semibold">Site Navigation</h2>
           <NavLink
             to="/"
             end
@@ -72,6 +73,7 @@ export default function Layout() {
           >
             Contact
           </NavLink>
+          <h2 className="underline font-semibold">Socials</h2>
           <NavLink
           to="https://www.linkedin.com/in/alexander-peebles/"
           target="_blank"
@@ -83,6 +85,40 @@ export default function Layout() {
           >
             My LinkedIn
           </NavLink>
+          <NavLink
+          to="/"
+          target="_blank"
+          className={({ isActive }) =>
+            `block py-2 px-3 rounded hover:bg-gray-700 ${
+              isActive ? 'bg-gray-700 font-semibold' : ''
+            }`
+          }
+          >
+            Twitter/X WIP
+          </NavLink>
+          <NavLink
+          to="/"
+          target="_blank"
+          className={({ isActive }) =>
+            `block py-2 px-3 rounded hover:bg-gray-700 ${
+              isActive ? 'bg-gray-700 font-semibold' : ''
+            }`
+          }
+          >
+            Instagram WIP
+          </NavLink>
+          <h2 className="underline font-semibold">Links to Projects</h2>
+          <NavLink
+          to="/"
+          target="_blank"
+          className={({ isActive }) =>
+            `block py-2 px-3 rounded hover:bg-gray-700 ${
+              isActive ? 'bg-gray-700 font-semibold' : ''
+            }`
+          }
+          >
+            Card Captor WIP
+          </NavLink>
         </nav>
       </aside>
 
@@ -93,20 +129,21 @@ export default function Layout() {
         }`}
       >
         {/* Header */}
-        <header className="fixed top-0 left-0 right-0 h-20 bg-gray-900 text-white flex items-center justify-center px-4 border-b z-50">
+        <header className="fixed top-0 left-0 right-0 h-20 bg-gray-900 text-white flex items-center justify-center px-4 border-b z-50 w-full">
           {/* Always show toggle button */}
           <button
-            className="absolute left-4 text-white text-2xl z-50"
             onClick={toggleSidebar}
             aria-label="Toggle Sidebar"
+            className="aside-button absolute left-4 text-white text-2xl z-50"
+            style={{backgroundColor: sidebarOpen ? '#1D4ED8' : '#111827'}}
           >
             {sidebarOpen ? '✕' : '☰'}
           </button>
-          <h1 className="text-lg font-bold">Business Site</h1>
+          <h1 className="text-lg font-bold">Stack Studio</h1>
         </header>
 
         {/* Page Content */}
-        <main className="justify-center mt-16 p-6 overflow-y-auto">
+        <main className="justify-center mt-16 p-6 w-full overflow-y-auto">
           <Outlet />
         </main>
       </div>
@@ -114,4 +151,4 @@ export default function Layout() {
   )
 }
 // Note: The sidebar will be hidden on mobile by default, and can be toggled with the button in the header.
-// The sidebar will always be visible on larger screens (md and up).
+// The sidebar will start visible on larger screens (md and up).
