@@ -125,7 +125,7 @@ export default function Layout() {
       {/* Main Content Area */}
       <div
         className={`flex-1 flex flex-col transition-all duration-200 ease-in-out ${
-          sidebarOpen && !isMobile ? 'md:ml-64' : ''
+          sidebarOpen && isMobile ? 'md:ml-64' : ''
         }`}
       >
         {/* Header */}
