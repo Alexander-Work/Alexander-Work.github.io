@@ -1,7 +1,7 @@
 export default function About() {
   return (
    
-    <div className="max-w-6xl mx-auto px-4 py-8">
+    <div className="overflow-y-scroll max-w-6xl mx-auto px-4 py-8">
       <h2 className="text-2xl font-bold mb-4">Some of My Qualifications</h2>
       <p className="mb-4">
         I am a developer with a wide skillset in web development, game development, database work, and generic applications in C#/Java. Below are some of my qualifications and skills that I have acquired over the years.
