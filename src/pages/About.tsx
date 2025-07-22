@@ -1,4 +1,4 @@
-import Card from "@/components/card";
+import Card from "@/components/Card";
 import {webCard, gameCard, databaseCard, appLangCard} from "@/constants";
 
 const About = () => {
