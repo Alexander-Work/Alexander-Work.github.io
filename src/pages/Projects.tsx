@@ -7,7 +7,7 @@ const Projects = () => {
       {/* Project 1 */}
       <div className="flex flex-col items-center max-w-sm">
         <img
-          src="src/assets/CardCaptor.png"
+          src="/assets/CardCaptor.png"
           alt="card captor"
           className="w-80 h-80 object-cover rounded-lg mb-4"
         />
@@ -29,7 +29,7 @@ const Projects = () => {
       {/* Project 2 */}
       <div className="flex flex-col items-center max-w-sm">
         <img
-          src="src/assets/suit-cropped.jpg"
+          src="/assets/suit-cropped.jpg"
           alt="dapper"
           className="w-80 h-80 object-cover rounded-lg mb-4"
         />
