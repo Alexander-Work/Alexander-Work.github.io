@@ -10,7 +10,7 @@ import NavLink from "./NavLink"
           <NavLink to="/About">About</NavLink>
         </nav>
         <nav className="text-4xl font-bold p-4 flex gap-4">
-          <NavLink to="/">Stack Studio</NavLink>
+          <NavLink to="/">Welcome</NavLink>
         </nav>
         <nav className=" text-white p-4 flex gap-4">
 
